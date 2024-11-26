@@ -1,4 +1,4 @@
-let startTime = new Date();
+﻿let startTime = new Date();
 let problemId = window.location.pathname;
 
 // Initialize with any existing time
@@ -13,7 +13,7 @@ chrome.runtime.sendMessage({
 
 // Create floating button for quick save
 const saveButton = document.createElement('button');
-saveButton.innerHTML = '💾 Save Problem';
+saveButton.innerHTML = ' Save Problem';
 saveButton.className = 'ka-helper-save-btn';
 document.body.appendChild(saveButton);
 
