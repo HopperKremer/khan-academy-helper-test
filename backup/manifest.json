@@ -1,0 +1,27 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Khan Academy Study Helper",
+  "version": "1.0",
+  "description": "Save problems, make notes, and track time spent on Khan Academy problems",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.khanacademy.org/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.khanacademy.org/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
